@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import { AlbumType } from '../../../utils/types';
-
 import { AlbumCardWrapper, AlbumImage, AlbumName } from './AlbumCard.styled';
 
 interface AlbumCardProps {
@@ -8,10 +7,10 @@ interface AlbumCardProps {
 }
 
 const AlbumCard: FC<AlbumCardProps> = ({ album }) => {
-  const { name, image, mbid } = album;
+  const { name, image, mbid, artist } = album;
 
   return (
-    <AlbumCardWrapper to={`/album/${mbid}`}>
+    <AlbumCardWrapper to={`/album/${artist.mbid}/${mbid}`}>
       <AlbumImage src={image[3]['#text']} alt={name} />
       <AlbumName>{name}</AlbumName>
     </AlbumCardWrapper>

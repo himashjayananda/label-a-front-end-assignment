@@ -1,3 +1,4 @@
+// types used throughout the app
 export type AlbumType = {
   name: string;
   mbid: string;
@@ -18,4 +19,18 @@ export type AlbumInfoType = {
     published: string;
     summary: string;
   };
+};
+
+export type ArtistType = {
+  name: string;
+  mbid: string;
+  image: {
+    size: string;
+    '#text': string;
+  }[];
+};
+
+export type SongType = {
+  name: string;
+  artist: string;
 };

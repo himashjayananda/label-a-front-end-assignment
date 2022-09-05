@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { breakpoints } from '../../globalStyled';
 
-export const HomeWrapper = styled.div`
+export const AlbumsWrapper = styled.div`
   margin: 40px 0;
 `;
 
@@ -21,4 +21,8 @@ export const CardWrapper = styled.div`
   @media (min-width: ${breakpoints.xl}) {
     grid-template-columns: repeat(4, 1fr);
   }
+`;
+
+export const ArtistName = styled.h2`
+  margin: 0;
 `;

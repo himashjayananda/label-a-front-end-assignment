@@ -1,12 +1,21 @@
 import { FC } from 'react';
-import { HeaderWrapper, Logo } from './Header.styled';
+import {
+  CustomNavLink,
+  HeaderWrapper,
+  Logo,
+  NavLinkWrapper,
+} from './Header.styled';
 
 interface HeaderProps {}
 
 const Header: FC<HeaderProps> = () => {
   return (
     <HeaderWrapper>
-      <Logo to='/'>Coldplay</Logo>
+      <Logo to='/'>Label A</Logo>
+      <NavLinkWrapper>
+        <CustomNavLink to='/'>Artists</CustomNavLink>
+        <CustomNavLink to='/search-song'>Search for a song</CustomNavLink>
+      </NavLinkWrapper>
     </HeaderWrapper>
   );
 };

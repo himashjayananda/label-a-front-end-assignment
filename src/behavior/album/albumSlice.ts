@@ -24,17 +24,34 @@ const initialState: AlbumStateType = {
 export const albumSlice = createSlice({
   name: 'album',
   initialState,
-  reducers: {},
+  reducers: {
+    resetAlbum: state => {
+      state.album = {
+        name: '',
+        tracks: { track: [] },
+        wiki: {
+          published: '',
+          summary: '',
+        },
+      };
+      state.loading = true;
+      state.error = '';
+    },
+  },
   extraReducers: builder => {
+    // get album details - fulfilled case
     builder.addCase(getAlbumDetails.fulfilled, (state, action) => {
       const { album } = action.payload;
       state.album = album;
       state.loading = false;
     });
+    // get album details - rejected case
     builder.addCase(getAlbumDetails.rejected, (state, action) => {
       state.error = "Oops! We couldn't retrieve data. Please try again later.";
     });
   },
 });
+
+export const { resetAlbum } = albumSlice.actions;
 
 export default albumSlice.reducer;

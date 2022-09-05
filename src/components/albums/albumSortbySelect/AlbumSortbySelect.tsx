@@ -1,7 +1,5 @@
 import { FC, ChangeEvent, Dispatch, SetStateAction } from 'react';
-import { useDispatch } from 'react-redux';
 import { CustomSelect, CustomSelectWrapper } from './AlbumSortbySelect.styled';
-import { AppDispatch } from '../../../behavior/store';
 
 interface AlbumSortbySelectProps {
   sortByOption: string;

@@ -1,4 +1,4 @@
-# Label A - My favourite artist app
+# Label A - My favourite artists app
 
 Simple app displaying albums and their songs from popular band, Coldplay.
 
